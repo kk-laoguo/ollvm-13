@@ -7,7 +7,7 @@
 从 obfuscator-llvm 项目移植到 llvm 13.x
 
 ## 使用
-可以直接此项目clone夏利，直接执行
+可以直接将项目clone下来，直接执行
 ```
 cd llvm-project-13
 mkdir build
