@@ -249,10 +249,6 @@ mv /usr/local/Toolchains  ~/Library/Developer/Toolchains
 
 
 
-Build
-
-打开 LLVM.sln 项目进行编译.
-
 ollvm 基本使用
 
 编译时使用参数
