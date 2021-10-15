@@ -1,9 +1,28 @@
 
 
 # ollvm 13
-[参考连接：移植llvm12.x](https://github.com/0x3f97/ollvm-12.x)
+
+#### [参考连接：移植llvm12.x](https://github.com/0x3f97/ollvm-12.x)
 
 从 obfuscator-llvm 项目移植到 llvm 13.x
+
+## 使用
+可以直接此项目clone夏利，直接执行
+```
+cd llvm-project-13
+mkdir build
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_CREATE_XCODE_TOOLCHAIN=ON  -DLLVM_ENABLE_PROJECTS="clang" ../llvm
+
+make -j8
+// toolcchains
+sudo make install-xcode-toolchain
+
+mv /usr/local/Toolchains  ~/Library/Developer/Toolchains
+// 之后重启xcode，就能看到新编译的llvm
+```
+
 
 ## 移植过程
 
@@ -231,7 +250,7 @@ INITIALIZE_PASS_DEPENDENCY(LowerSwitchLegacyPass)
 cmake
 
 ```
-cd llvm-project
+cd llvm-project-13
 mkdir build
 cd build
 
